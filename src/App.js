@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { useState, useEffect, useContext } from "react";
+import BooksContext from "./Contexts/BooksContext";
+import "./styles/App.css";
+import Navbar from "./Components/Navbar";
+import Logo from "./Components/Logo";
+import Search from "./Components/Search";
+import ShowBooks from "./Components/ShowBooks";
 function App() {
+  const { books, setBooks } = useContext(BooksContext);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar>
+        <Logo />
+        <Search/>
+      </Navbar>
+      <ShowBooks />
     </div>
   );
 }
