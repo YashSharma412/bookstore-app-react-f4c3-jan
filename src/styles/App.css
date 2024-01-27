@@ -103,6 +103,7 @@
 .top3__books-container .topBook{
   width: 30%;
   max-width: 490px;
+  min-width: 415px;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 2fr;
@@ -129,7 +130,9 @@ background: rgba(113, 197, 244, 0.38);
   transform: rotate(-5deg);
 }
 
-
+.book-container img{
+  display: block;
+}
 
 
 
